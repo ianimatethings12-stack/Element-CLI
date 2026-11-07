@@ -7,7 +7,7 @@
 <p align="center">The open source AI coding agent.</p>
 <p align="center">
   <a href="https://github.com/ianimatethings12-stack/Element-CLI/discussions"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/element-agent"><img alt="npm" src="https://img.shields.io/npm/v/element-agent?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@elementai/cli"><img alt="npm" src="https://img.shields.io/npm/v/@elementai/cli?style=flat-square" /></a>
   <a href="https://github.com/ianimatethings12-stack/Element-CLI/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/ianimatethings12-stack/Element-CLI/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
@@ -47,10 +47,10 @@
 curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/Element-CLI/dev/install | bash
 
 # Package managers
-npm install -g element-agent
-bun add -g element-agent
-pnpm add -g element-agent
-yarn global add element-agent
+npm install -g @elementai/cli
+bun add -g @elementai/cli
+pnpm add -g @elementai/cli
+yarn global add @elementai/cli
 ```
 
 > [!TIP]
