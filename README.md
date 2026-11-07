@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="https://github.com/ianimatethings12-stack/oceancode">
-    <img src="packages/web/src/assets/ocean-logo.png" width="130" alt="OceanCode logo" />
+  <a href="https://github.com/ianimatethings12-stack/Element-CLI">
+    <img src="packages/web/src/assets/ocean-logo.png" width="130" alt="Element logo" />
   </a>
 </p>
-<h1 align="center">OceanCode</h1>
+<h1 align="center">Element</h1>
 <p align="center">The open source AI coding agent.</p>
 <p align="center">
-  <a href="https://github.com/ianimatethings12-stack/oceancode/discussions"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/oceancode"><img alt="npm" src="https://img.shields.io/npm/v/oceancode?style=flat-square" /></a>
-  <a href="https://github.com/ianimatethings12-stack/oceancode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/ianimatethings12-stack/oceancode/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://github.com/ianimatethings12-stack/Element-CLI/discussions"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://www.npmjs.com/package/element"><img alt="npm" src="https://img.shields.io/npm/v/element?style=flat-square" /></a>
+  <a href="https://github.com/ianimatethings12-stack/Element-CLI/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/ianimatethings12-stack/Element-CLI/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![OceanCode Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://github.com/ianimatethings12-stack/oceancode)
+[![Element Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://github.com/ianimatethings12-stack/Element-CLI)
 
 ---
 
@@ -44,48 +44,37 @@
 
 ```bash
 # Install script
-curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/oceancode/dev/install | bash
+curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/Element-CLI/dev/install | bash
 
 # Package managers
-npm install -g oceancode@latest
-bun add -g oceancode@latest
-pnpm add -g oceancode@latest
-yarn global add oceancode@latest
+npm install -g element@latest
+bun add -g element@latest
+pnpm add -g element@latest
+yarn global add element@latest
 ```
 
 > [!TIP]
 > Remove versions older than 0.1.x before installing.
 
-### Desktop App (BETA)
-
-OceanCode is also available as a desktop application. Download the unsigned v0.1 build from the [releases page](https://github.com/ianimatethings12-stack/oceancode/releases).
-
-| Platform              | Download                                  |
-| --------------------- | ----------------------------------------- |
-| macOS (Apple Silicon) | `oceancode-desktop-mac-arm64.dmg`         |
-| Windows               | `oceancode-desktop-windows-x64.exe`       |
-| Linux                 | `oceancode-desktop-linux-x64.AppImage`    |
-
-v0.1 desktop builds are unsigned and macOS Intel builds are not yet available. macOS may require right-click → Open, and Windows may show a SmartScreen warning.
 
 #### Installation Directory
 
 The install script respects the following priority order for the installation path:
 
-1. `$OCEANCODE_INSTALL_DIR` - Custom installation directory
+1. `$ELEMENT_INSTALL_DIR` - Custom installation directory
 2. `$XDG_BIN_DIR` - XDG Base Directory Specification compliant path
 3. `$HOME/bin` - Standard user binary directory (if it exists or can be created)
-4. `$HOME/.oceancode/bin` - Default fallback
+4. `$HOME/.element/bin` - Default fallback
 
 ```bash
 # Examples
-OCEANCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/oceancode/dev/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/oceancode/dev/install | bash
+ELEMENT_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/Element-CLI/dev/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/Element-CLI/dev/install | bash
 ```
 
 ### Agents
 
-OceanCode includes two built-in agents you can switch between with the `Tab` key.
+Element includes two built-in agents you can switch between with the `Tab` key.
 
 - **build** - Default, full-access agent for development work
 - **plan** - Read-only agent for analysis and code exploration
@@ -96,20 +85,20 @@ OceanCode includes two built-in agents you can switch between with the `Tab` key
 Also included is a **general** subagent for complex searches and multistep tasks.
 This is used internally and can be invoked using `@general` in messages.
 
-Learn more about [agents](https://github.com/ianimatethings12-stack/oceancode/tree/dev/packages/web/src/content/docs/agents).
+Learn more about [agents](https://github.com/ianimatethings12-stack/Element-CLI/tree/dev/packages/web/src/content/docs/agents).
 
 ### Documentation
 
-For more info on how to configure OceanCode, [**head over to our docs**](https://github.com/ianimatethings12-stack/oceancode/tree/dev/packages/web/src/content/docs).
+For more info on how to configure Element, [**head over to our docs**](https://github.com/ianimatethings12-stack/Element-CLI/tree/dev/packages/web/src/content/docs).
 
 ### Contributing
 
-If you're interested in contributing to OceanCode, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
+If you're interested in contributing to Element, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
 
-### Building on OceanCode
+### Building on Element
 
-If you maintain a third-party project with "oceancode" in its name, for example "oceancode-dashboard" or "oceancode-mobile", please add a note to your README to clarify that it is not built by the OceanCode team and is not affiliated with us in any way.
+If you maintain a third-party project with "element" in its name, for example "element-dashboard" or "element-mobile", please add a note to your README to clarify that it is not built by the Element team and is not affiliated with us in any way.
 
 ---
 
-**Join our community** [Discord](https://github.com/ianimatethings12-stack/oceancode/discussions) | [X.com](https://github.com/ianimatethings12-stack/oceancode)
+**Join our community** [Discord](https://github.com/ianimatethings12-stack/Element-CLI/discussions) | [X.com](https://github.com/ianimatethings12-stack/Element-CLI)

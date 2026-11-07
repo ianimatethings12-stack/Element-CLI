@@ -320,7 +320,8 @@ const tokenSettings = (specifier: string, token: string) => {
     return { authToken: token }
   if (
     specifier === "@opencode/ai/providers/google-vertex" ||
-    specifier.startsWith("@opencode/ai/providers/google-vertex/")
+    specifier.startsWith("@opencode/ai/providers/google-vertex/") ||
+    specifier === "@opencode/ai/providers/antigravity"
   )
     return { accessToken: token }
   return { apiKey: token }

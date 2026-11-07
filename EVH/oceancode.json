@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ianimatethings12-stack/oceancode/dev/config.schema.json",
+  "model": "astra/Astra",
+  "providers": {
+    "astra": {
+      "name": "Astra",
+      "env": ["ASTRA_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "http://localhost:20128/v1",
+        "apiKey": "sk-96cea5961219c4ea-bh7ar9-93584319"
+      },
+      "models": {
+        "Astra": {
+          "name": "Astra",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          }
+        }
+      }
+    }
+  }
+}

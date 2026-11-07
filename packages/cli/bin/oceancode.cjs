@@ -30,19 +30,20 @@ function run(target) {
   })
 }
 
-const envPath = process.env.OCEANCODE_BIN_PATH || process.env.OPENCODE_BIN_PATH
+const envPath = process.env.ELEMENT_BIN_PATH || process.env.OCEANCODE_BIN_PATH || process.env.OPENCODE_BIN_PATH
 const scriptDir = path.dirname(fs.realpathSync(__filename))
 const invoked = process.argv[1] ? path.basename(process.argv[1]).replace(/\.cjs$/, "") : ""
-const command = invoked || "oceancode"
-const isOcean = true
+const command = invoked || "element"
+const isElement = command === "element"
+const isOcean = command === "oceancode" || command === "ocean"
 const nodeBuild = invoked === "oceancode-node" || invoked === "opencode-node"
-const sourceCommand = nodeBuild ? "oceancode-node" : "oceancode"
+const sourceCommand = nodeBuild ? (isElement ? "element-node" : "oceancode-node") : (isElement ? "element" : "oceancode")
 const platform = { darwin: "darwin", linux: "linux", win32: "windows" }[os.platform()] || os.platform()
 const arch = { x64: "x64", arm64: "arm64", arm: "arm" }[os.arch()] || os.arch()
 const cachedExe = path.join(scriptDir, platform === "windows" ? `${sourceCommand}.exe` : sourceCommand)
 const cachedDot = path.join(scriptDir, `.${sourceCommand}`)
 const cached = fs.existsSync(cachedExe) ? cachedExe : cachedDot
-const base = isOcean ? `oceancode-${platform}-${arch}` : `@opencode/cli${nodeBuild ? "-node" : ""}-` + platform + "-" + arch
+const base = isElement ? `element-${platform}-${arch}` : isOcean ? `oceancode-${platform}-${arch}` : `@opencode/cli${nodeBuild ? "-node" : ""}-` + platform + "-" + arch
 const binary = platform === "windows" ? `${sourceCommand}.exe` : sourceCommand
 
 function supportsAvx2() {

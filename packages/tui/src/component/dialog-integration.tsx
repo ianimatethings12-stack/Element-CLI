@@ -53,6 +53,7 @@ const INTEGRATION_PRIORITY: Record<string, number> = {
   "github-copilot": 3,
   anthropic: 4,
   google: 5,
+  "google-antigravity": 6,
 }
 
 type ConnectMethod = Exclude<IntegrationInfo["methods"][number], { type: "env" }>
@@ -721,7 +722,10 @@ function OAuthAuto(props: {
       })
   }
 
-  onMount(poll)
+  onMount(() => {
+    open()
+    poll()
+  })
   onCleanup(() => {
     if (timer) clearTimeout(timer)
     if (settled) return

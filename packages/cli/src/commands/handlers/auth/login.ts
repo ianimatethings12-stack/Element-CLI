@@ -24,6 +24,7 @@ const integrationPriority = new Map([
   ["github-copilot", 3],
   ["anthropic", 4],
   ["google", 5],
+  ["google-antigravity", 6],
 ])
 
 export default Runtime.handler(

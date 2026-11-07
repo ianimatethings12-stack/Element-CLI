@@ -88,7 +88,7 @@ async function publishDistribution(input: {
     JSON.stringify(
       {
         name: input.name,
-        description: "OceanCode - an AI coding agent for the terminal, desktop, and IDE",
+        description: "Element - an AI coding agent for the terminal and IDE",
         homepage: "https://github.com/ianimatethings12-stack/oceancode",
         bin: {
           [input.command]: `./bin/${input.command}.exe`,
@@ -155,11 +155,11 @@ async function publishDistribution(input: {
 
 await publishDistribution({
   root,
-  name: "oceancode",
-  command: "oceancode",
+  name: "element",
+  command: "element",
   legacyCommand: "ocean",
-  binary: "oceancode",
-  packagePrefix: "oceancode-",
+  binary: "element",
+  packagePrefix: "element-",
   artifact: "cli",
 })
 if (Script.channel !== "latest" && existsSync(path.join(root, "node"))) {

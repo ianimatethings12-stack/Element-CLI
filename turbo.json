@@ -46,10 +46,6 @@
       "dependsOn": ["transit"],
       "outputs": []
     },
-    "@opencode/desktop#test": {
-      "outputs": [],
-      "cache": false
-    },
     "@opencode/sdk#verify:package": {
       "outputs": []
     }

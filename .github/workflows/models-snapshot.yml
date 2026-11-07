@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   refresh:
-    if: github.repository == 'ianimatethings12-stack/oceancode'
+    if: github.repository == 'ianimatethings12-stack/Element-CLI'
     runs-on: blacksmith-4vcpu-ubuntu-2404
 
     steps:

@@ -1,10 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@opencode/cli",
-  "version": "1.2.6",
+  "version": "1.3.0",
   "type": "module",
   "license": "MIT",
   "bin": {
+    "element": "./bin/element.cjs",
     "oceancode": "./bin/oceancode.cjs",
     "ocean": "./bin/ocean.cjs",
     "opencode": "./bin/opencode.cjs",
@@ -85,5 +86,8 @@
     "solid-refresh": "0.6.3",
     "vite": "catalog:",
     "vite-plugin-solid": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -38,7 +38,7 @@ jobs:
 
       - name: Install opencode
         if: steps.author.outputs.skip != 'true'
-        run: curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/oceancode/dev/install | bash
+        run: curl -fsSL https://raw.githubusercontent.com/ianimatethings12-stack/Element-CLI/dev/install | bash
 
       - name: Triage issue
         if: steps.author.outputs.skip != 'true'
